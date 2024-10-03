@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1abc9c, #3498db);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #16a085;
+            transform: scale(1.1);
+            border-radius: 5px;
+        }
+        .login-container .login-btn {
+            background-color: #e74c3c;
+            border: none;
+            padding: 10px 15px;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .login-container .login-btn:hover {
+            background-color: #c0392b;
+            transform: scale(1.1);
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            margin: 40px auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            text-align: center;
+            animation: fadeIn 1s ease;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 36px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Button Styling */
+        .btn {
+            background-color: #1abc9c;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn:hover {
+            background-color: #16a085;
+            transform: translateY(-5px);
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            margin-top: auto;
+            font-size: 14px;
+        }
+
+        /* Keyframes for Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="studenthome.html">Dashboard</a></li> <!-- Redirects to Dashboard -->
+            <li><a href="studentproject.html">Projects</a></li> <!-- Redirects to Projects Page -->
+            <li><a href="achievements.html">Achievements</a></li> <!-- Redirects to Achievements Page -->
+            <li><a href="portfolio.html">Portfolio</a></li> <!-- Redirects to Portfolio Page -->
+            <li><a href="profile.html">Profile</a></li> <!-- Redirects to Profile Page -->
+            <li><a href="perks.html">Perks</a></li> <!-- Redirects to Perks Page -->
+            <li><a href="projectstracking.html">Projects Tracking</a></li> <!-- Redirects to Projects Tracking Page -->
+            <li class="login-container">
+                <button class="login-btn" onclick="window.location.href='index.html'">Logout</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section id="main-content" class="main-content">
+        <h2>Welcome to Student Home</h2>
+        <p>This is the home page for students where they can manage their projects and portfolios.</p>
+        <p>Explore the options available in the navbar to navigate through various sections.</p>
+        <p>Keep track of your progress and achievements in your projects.</p>
+        <p>If you have any questions or need assistance, feel free to reach out to your mentor or admin.</p>
+        <button class="btn">Get Started</button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Student Project Management System | All rights reserved.</p>
+    </footer>
+</body>
+</html>

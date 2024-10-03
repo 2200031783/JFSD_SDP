@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #1abc9c;
+            transform: scale(1.1);
+            border-radius: 5px;
+        }
+
+        /* Main Profile Section */
+        .profile-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            margin: 40px auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            text-align: center;
+            animation: fadeIn 1s ease;
+        }
+
+        /* Profile Image */
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Profile Info */
+        .profile-info {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        /* Editable Info */
+        .edit-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .edit-btn:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        /* Section Headers */
+        h2 {
+            color: #2c3e50;
+            font-size: 30px;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 24px;
+            color: #16a085;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        /* Achievement Cards */
+        .achievement-card {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .achievement-card p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            margin-top: auto;
+            font-size: 14px;
+        }
+
+        /* Keyframes for Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="studenthome.html">Dashboard</a></li>
+            <li><a href="studentproject.html">Projects</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="perks.html">Perks</a></li>
+            <li><a href="projectstracking.html">Projects Tracking</a></li>
+            <li class="login-container">
+                <button class="edit-btn" onclick="window.location.href='index.html'">Logout</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Profile Content Section -->
+    <section class="profile-container">
+        <img src="profile-pic.jpg" alt="Profile Image" class="profile-image">
+        <h2>John Doe</h2>
+        <p class="profile-info">Computer Science Student | University XYZ</p>
+        <button class="edit-btn">Edit Profile</button>
+
+        <h3>Projects</h3>
+        <div class="achievement-card">
+            <p><strong>Project Title:</strong> Student Management System</p>
+            <p><strong>Technologies:</strong> Java, Spring Boot, MySQL</p>
+        </div>
+        <div class="achievement-card">
+            <p><strong>Project Title:</strong> Online Voting Platform</p>
+            <p><strong>Technologies:</strong> React, Node.js, MongoDB</p>
+        </div>
+
+        <h3>Achievements</h3>
+        <div class="achievement-card">
+            <p><strong>Achievement:</strong> Hackathon Winner 2023</p>
+            <p><strong>Category:</strong> Blockchain Development</p>
+        </div>
+        <div class="achievement-card">
+            <p><strong>Achievement:</strong> Google Developer Scholar 2024</p>
+            <p><strong>Field:</strong> Web Development</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Student Project Management System | All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Admin Account</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            min-height: 100vh; /* Minimum height to fill the viewport */
+            background: linear-gradient(135deg, #e74c3c, #8e44ad); /* Gradient background */
+            color: #333; /* Set text color for visibility */
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #c0392b;
+            transform: scale(1.1);
+            border-radius: 5px;
+        }
+
+        .login-container .login-btn {
+            background-color: #16a085;
+            border: none;
+            padding: 10px 15px;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .login-container .login-btn:hover {
+            background-color: #1abc9c;
+            transform: scale(1.1);
+        }
+
+        /* Create Account Form Styling */
+        .create-account-form {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease;
+            width: 90%;
+            max-width: 600px; /* Limits the maximum width of the form */
+            margin: auto; /* Center the form */
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #1abc9c;
+            color: white;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+            opacity: 1; /* Ensure inputs are visible */
+            animation: slideIn 0.5s ease forwards; /* Animation effect */
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="date"]:focus {
+            border-color: #1abc9c;
+            outline: none;
+        }
+
+        button {
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #16a085;
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: auto; /* Push footer to the bottom */
+            text-align: center;
+            color: #555;
+            padding: 10px 0; /* Add padding for the footer */
+        }
+
+        /* Keyframes for Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="adminlogin.html">Manage Students</a></li>
+            <li><a href="adminlogin.html">Project Submissions</a></li>
+            <li><a href="adminlogin.html">Quick Actions</a></li>
+            <li><a href="adminlogin.html">Dashboard</a></li>
+            <li class="login-container">
+                <button class="login-btn" onclick="window.location.href='index.html'">Logout</button>
+            </li>
+        </ul>
+    </nav>  
+
+    <!-- Create Admin Account Form Section -->
+    <section id="create-admin-account-form" class="create-account-form">
+        <h2>Create Admin Account</h2>
+        <form action="adminlogin.html" method="POST">
+            <table>
+                <tr>
+                    <th colspan="2">Admin Account Information</th>
+                </tr>
+                <tr>
+                    <td><label for="first-name">First Name:</label></td>
+                    <td><input type="text" id="first-name" name="first-name" required style="animation-delay: 0.1s;"></td>
+                </tr>
+                <tr>
+                    <td><label for="last-name">Last Name:</label></td>
+                    <td><input type="text" id="last-name" name="last-name" required style="animation-delay: 0.2s;"></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date of Birth:</label></td>
+                    <td><input type="date" id="dob" name="dob" required style="animation-delay: 0.3s;"></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td><input type="text" id="address" name="address" required style="animation-delay: 0.4s;"></td>
+                </tr>
+                <tr>
+                    <td><label for="college-name">College Name:</label></td>
+                    <td><input type="text" id="college-name" name="college-name" required style="animation-delay: 0.5s;"></td>
+                </tr>
+                <tr>
+                    <td><label for="username">Username:</label></td>
+                    <td><input type="text" id="username" name="username" required style="animation-delay: 0.6s;"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password" required style="animation-delay: 0.7s;"></td>
+                </tr>
+                <tr>
+                    <td><label for="confirm-password">Confirm Password:</label></td>
+                    <td><input type="password" id="confirm-password" name="confirm-password" required style="animation-delay: 0.8s;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button type="submit">Create Account</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Student Project Management System | All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #1abc9c;
+            transform: scale(1.1);
+            border-radius: 5px;
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            margin: 40px auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            animation: fadeIn 1s ease;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 36px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Progress Bar */
+        .progress-bar-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .progress-bar {
+            width: 70%;
+            height: 30px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+
+        .progress-bar-fill {
+            width: 60%;
+            height: 100%;
+            background-color: #2ecc71;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Achievements List */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .achievement-badge {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Achievement Details Section */
+        .achievement-item {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .achievement-item:hover {
+            background-color: #e0f7fa;
+            transform: scale(1.02);
+        }
+
+        .achievement-item p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .achievement-details {
+            display: none;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .achievement-item.active .achievement-details {
+            display: block;
+        }
+
+        /* Add Achievement Button */
+        .add-achievement {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .add-achievement button {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-achievement button:hover {
+            background-color: #27ae60;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            margin-top: auto;
+            font-size: 14px;
+        }
+
+        /* Keyframes for Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="studenthome.html">Dashboard</a></li>
+            <li><a href="studentproject.html">Projects</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="perks.html">Perks</a></li>
+            <li><a href="projectstracking.html">Projects Tracking</a></li>
+            <li class="login-container">
+                <button class="login-btn" onclick="window.location.href='index.html'">Logout</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Achievements Content Section -->
+    <section id="main-content" class="main-content">
+        <h2>Achievements</h2>
+        <p>Track your achievements and milestones.</p>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar-container">
+            <div class="progress-bar">
+                <div class="progress-bar-fill">60% Achieved</div>
+            </div>
+        </div>
+
+        <ul>
+            <li>
+                <div class="achievement-badge">1</div>
+                <div class="achievement-item" onclick="toggleDetails(this)">
+                    <p>First place in Science Fair</p>
+                    <div class="achievement-details">
+                        <p>Details: Won first place for innovative project on renewable energy.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="achievement-badge">2</div>
+                <div class="achievement-item" onclick="toggleDetails(this)">
+                    <p>Top scorer in Mathematics</p>
+                    <div class="achievement-details">
+                        <p>Details: Achieved highest score in national level math competition.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="achievement-badge">3</div>
+                <div class="achievement-item" onclick="toggleDetails(this)">
+                    <p>Participation in National Robotics Challenge</p>
+                    <div class="achievement-details">
+                        <p>Details: Led a team of 5 in national robotics challenge, secured 3rd place.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <!-- Add Achievement Button -->
+        <div class="add-achievement">
+            <button>Add New Achievement</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Student Project Management System | All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle achievement details on click
+        function toggleDetails(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

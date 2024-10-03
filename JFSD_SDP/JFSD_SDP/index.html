@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managing and Tracking Students' Projects and Portfolios</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Achievements</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Perks</a></li>
+            <li><a href="#">Projects Tracking</a></li>
+            <li class="login-container">
+                <button class="login-btn" onclick="showLoginOptions()">Login</button>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="navbar-space"></div>
+    <div>
+    <h2 align="center">TRACKING AND MANAGING STUDENTS PROJECTS AND PORTFOLIOS</h2>
+    </div>
+    <br><br> <br>
+
+    <!-- Logo Image Section (Full-screen width) -->
+    <div class="logo-container">
+        <img src="C:\Users\Sai Byreddy\Downloads\sdplogo.jpg" alt="Project Logo" class="logo">
+    </div>
+
+    <!-- Project Description Section -->
+    <section id="description">
+        <h2>About Our Project</h2>
+        
+            <p>This system helps manage and track students' projects efficiently.</p>
+            <p>We provide an easy-to-use interface for students to submit and track their project portfolios.</p>
+            <p>Our platform ensures collaboration between students and supervisors for better project outcomes.</p>
+            <p>With real-time project tracking, students can easily monitor their progress.</p>
+            <p>We aim to streamline the project management process for both students and administrators.</p>
+            <p>The system also offers reporting tools for better decision-making and project reviews.</p>
+            <p>Join us in revolutionizing student project management with cutting-edge solutions.</p>
+            <p>This platform encourages student creativity and innovation through effective project management.</p>
+            <p>By utilizing modern technologies, we ensure that students stay organized and focused.</p>
+            <p>Our mission is to enhance the educational experience by simplifying project tracking.</p>
+        
+    </section>
+
+    <!-- Team Members Section -->
+    <section id="team">
+        <h3>Meet Our Team</h3>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="C:\Users\Sai Byreddy\Downloads\mypic (1).jpg" alt="Team Member 1" class="team-img">
+                <p>Member 1</p>
+            </div>
+            <div class="team-member">
+                <img src="C:\Users\Sai Byreddy\Downloads\abhi.jpg" alt="Team Member 2" class="team-img">
+                <p>Member 2</p>
+            </div>
+            <div class="team-member">
+                <img src="C:\Users\Sai Byreddy\Downloads\junaid2.jpg" alt="Team Member 3" class="team-img">
+                <p>Member 3</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact-form" id="contact">
+        <div class="container">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Student Project Management System | All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal for student and admin options -->
+    <div id="login-options" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginOptions()">&times;</span>
+            <h3>Select Login Type</h3>
+            <button onclick="redirectTo('studentlogin.html')">Student Login</button>
+            <button onclick="redirectTo('adminlogin.html')">Admin Login</button>
+        </div>
+    </div>
+</body>
+</html>

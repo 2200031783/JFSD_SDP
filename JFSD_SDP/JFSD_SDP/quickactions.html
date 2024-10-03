@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Actions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e74c3c, #8e44ad);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #c0392b;
+            transform: scale(1.1);
+            border-radius: 5px;
+        }
+
+        .main-content {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            margin: 40px auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            text-align: center;
+            animation: fadeIn 1s ease;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            margin-top: auto;
+            font-size: 14px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 36px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 10px 0;
+            width: 200px;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        /* Keyframes for Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="managestudent.html">Manage Students</a></li>
+            <li><a href="projectsubmissions.html">Project Submissions</a></li>
+            <li><a href="quickactions.html">Quick Actions</a></li>
+            <li><a href="adminhome.html">Dashboard</a></li>
+            <li class="login-container">
+                <button class="login-btn" onclick="window.location.href='index.html'">Logout</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section id="main-content" class="main-content">
+        <h2>Quick Actions</h2>
+        <div class="button-container">
+            <button class="btn" onclick="addStudent()">Add Student</button>
+            <button class="btn" onclick="submitProject()">Submit Project</button>
+            <button class="btn" onclick="generateReport()">Generate Report</button>
+            <button class="btn" onclick="sendNotifications()">Send Notifications</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Student Project Management System | All rights reserved.</p>
+    </footer>
+
+    <script>
+        function addStudent() {
+            // Logic to add a new student
+            alert('Add Student functionality goes here.');
+        }
+
+        function submitProject() {
+            // Logic to submit a project
+            alert('Submit Project functionality goes here.');
+        }
+
+        function generateReport() {
+            // Logic to generate a report
+            alert('Generate Report functionality goes here.');
+        }
+
+        function sendNotifications() {
+            // Logic to send notifications
+            alert('Send Notifications functionality goes here.');
+        }
+    </script>
+</body>
+</html>
